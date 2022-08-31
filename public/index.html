@@ -6,5 +6,18 @@
     </head>
     <body>
         <p>Welcome to the chat app</p>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript">
+            let socket = io() //socket client side init
+
+            socket.on('connect',()=>{
+                console.log("connected to the client side")
+            })
+
+            socket.on('disconnect',()=>{
+                console.log("disconnected from the client side")
+            })
+        </script>
     </body>
 </html>
